@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ScreenShotTool app icon">
+  <defs>
+    <linearGradient id="bg" x1="48" y1="24" x2="208" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#183A66"/>
+      <stop offset="1" stop-color="#2D6CDF"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="68" y1="72" x2="190" y2="174" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#DDE8F6"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="76" y1="198" x2="169" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6A400"/>
+      <stop offset=".58" stop-color="#FFD23F"/>
+      <stop offset="1" stop-color="#FFE36D"/>
+    </linearGradient>
+    <filter id="shadow" x="20" y="32" width="216" height="184" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#06172A" flood-opacity=".28"/>
+    </filter>
+    <filter id="arrowShadow" x="52" y="82" width="140" height="142" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#06172A" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="43" y="60" width="170" height="122" rx="25" fill="#0A2138"/>
+    <rect x="57" y="74" width="142" height="94" rx="15" fill="url(#screen)"/>
+    <path d="M57 91c0-9 7-17 17-17h108c9 0 17 8 17 17v8H57z" fill="#FFFFFF" fill-opacity=".48"/>
+    <circle cx="76" cy="86" r="4" fill="#9CB4CC"/>
+    <circle cx="90" cy="86" r="4" fill="#B9C9DB"/>
+    <path d="M80 118h58" stroke="#C8D8E8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M80 137h36" stroke="#D7E4F1" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#arrowShadow)">
+    <circle cx="174" cy="104" r="18" fill="#2D6CDF" fill-opacity=".16"/>
+    <circle cx="174" cy="104" r="8" fill="#2D6CDF"/>
+    <path d="M74 194c-4 4-4 11 0 15s11 4 15 0l54-54 15 15 18-67-67 18 15 15-50 58z" fill="url(#arrow)"/>
+    <path d="M147 150 158 161 171 115" fill="#F3B600" fill-opacity=".35"/>
+  </g>
+</svg>

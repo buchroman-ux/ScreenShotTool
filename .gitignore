@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/artifacts/
+**/*.user
+**/*.suo
+**/.vs/
+ScreenShotTool.Installer/Payload/*.zip
+.codex-security-scans/
+ScreenShotToolSetup.exe
+
+graphify-out/
