@@ -1,0 +1,60 @@
+# Visual Studio / Rider / IDE
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+artifacts/
+publish/
+dist/
+out/
+
+# Logs
+*.log
+logs/
+
+# Debug symbols
+*.pdb
+
+# Secrets / certificates / local config
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+appsettings.Development.json
+local.settings.json
+
+# Windows / macOS
+Thumbs.db
+.DS_Store
+
+# Local scan/tool output
+.codex-security-scans/
+graphify-out/
+
+# Installer/release packages should normally be uploaded as GitHub Release assets,
+# not committed directly to source.
+*.msix
+*.msixupload
+*.appx
+*.appxbundle
+*.zip
+*.7z
+*.rar
+*.exe
+
+# Allow documentation files even if zipped examples are later added intentionally.
+!README.md
+!CHANGELOG.md
+!LICENSE
+!SECURITY.md
+!CONTRIBUTING.md
+!RELEASE-CHECKLIST.md
+!SHA256SUMS.txt
