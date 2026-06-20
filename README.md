@@ -1,6 +1,15 @@
 # ScreenShotTool
 
-Native Windows screenshot capture and annotation utility built with C#/.NET 8 and WPF.
+ScreenShotTool is a native Windows screenshot capture and annotation utility built with C#/.NET 8 and WPF.
+
+This repository is the clean open-source version of the project. The original private development repository is kept separate so old history, local files, and private development notes are not exposed.
+
+## Goals
+
+- Provide a simple Windows screenshot tool.
+- Keep the official source repository clean and safe for public use.
+- Allow anyone to copy, modify, fork, and reuse the project under the MIT License.
+- Keep installer binaries out of source history and publish them as GitHub Release assets.
 
 ## Download
 
@@ -10,8 +19,16 @@ The setup executable is intentionally not committed to source history. This keep
 
 ## Build
 
+From the repository root:
+
 ```powershell
-dotnet build .\ScreenShotTool\ScreenShotTool.csproj
+dotnet restore
+dotnet build -c Release
+```
+
+To publish only the app:
+
+```powershell
 dotnet publish .\ScreenShotTool\ScreenShotTool.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false
 ```
 
@@ -35,7 +52,9 @@ The installer output is created under:
 ScreenShotTool\artifacts\installer\ScreenShotToolSetup.exe
 ```
 
-The installer uses a per-user install location by default, creates a Start Menu shortcut, and registers the app in Windows Installed apps so it can be uninstalled normally. The wizard lets the user choose the install folder, whether to start with Windows, whether to create a Desktop shortcut, and whether to launch after setup. For unattended install without launch:
+The installer uses a per-user install location by default, creates a Start Menu shortcut, and registers the app in Windows Installed apps so it can be uninstalled normally. The wizard lets the user choose the install folder, whether to start with Windows, whether to create a Desktop shortcut, and whether to launch after setup.
+
+For unattended install without launch:
 
 ```powershell
 .\ScreenShotTool\artifacts\installer\ScreenShotToolSetup.exe /silent /no-launch
@@ -61,19 +80,7 @@ ScreenShotTool\Installer\ScreenShotTool.iss
 
 If Inno Setup's `ISCC.exe` is installed, `build-installer.ps1` also compiles that standard installer.
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Security
-
-See [SECURITY.md](SECURITY.md) for vulnerability reporting.
-
-## License
-
-ScreenShotTool is released under the [MIT License](LICENSE).
-
-## Shortcuts and tools
+## Shortcuts and Tools
 
 - `Ctrl + Shift + S`: default screenshot shortcut. It can be changed in Settings.
 - The capture screen freezes the desktop immediately, so short-lived popups can still be selected.
@@ -96,3 +103,46 @@ By default, screenshots are saved to:
 ```
 
 The folder can be changed in Settings from the tray menu.
+
+## Repository Safety Model
+
+People may:
+
+- view the source code after the repository becomes public
+- download the project
+- fork the project
+- copy the files
+- modify their own copy
+- submit pull requests
+
+People may not:
+
+- push directly to this official repository unless the owner gives them write access
+- change the official `main` branch unless repository permissions/rules allow it
+- delete or control the official repository
+
+## Release Checklist
+
+Before making this repository public or publishing a release, follow [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md).
+
+## Verify Installer Checksum
+
+After a release installer is uploaded, verify it with PowerShell:
+
+```powershell
+Get-FileHash .\ScreenShotToolSetup.exe -Algorithm SHA256
+```
+
+Compare the output with `SHA256SUMS.txt` from the same release.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability reporting.
+
+## License
+
+ScreenShotTool is released under the [MIT License](LICENSE).
