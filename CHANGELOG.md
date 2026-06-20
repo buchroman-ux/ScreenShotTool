@@ -6,24 +6,24 @@ This project follows a simple release history format.
 
 ## [Unreleased]
 
+No unreleased changes yet.
+
+## [1.0.0] - 2026-06-20
+
 ### Added
 
-- Clean open-source source tree.
-- MIT License.
-- Security policy.
-- Contribution guide.
-- Release checklist.
-- Root solution file for `dotnet restore` and `dotnet build`.
-- Safe `.gitignore` for Windows/.NET development.
-- Single-instance startup guard to avoid duplicate tray icons and hotkey registrations.
+- Initial public open-source release.
+- Windows screenshot capture utility.
+- Annotation/editor tools.
+- Windows tray icon workflow.
+- Configurable screenshot shortcut.
+- Custom installer with wizard UI.
+- Install/uninstall support.
+- SHA256 checksum file for installer verification.
+- MIT License and public project documentation.
 
-### Pending Before Public Release
+### Verified
 
-- Push the clean source repository to GitHub.
-- Run final secret scans.
-- Build and test from the clean repository.
-- Add screenshots if desired.
-- Add installer package to GitHub Releases.
-- Add SHA256 checksum for the release installer.
-- Protect the `main` branch.
-- Change repository visibility to public.
+- Release build completed successfully.
+- Installer was manually tested on Windows.
+- Install and uninstall flow were manually tested.
