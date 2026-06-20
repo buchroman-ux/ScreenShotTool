@@ -14,7 +14,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputDir=..\artifacts\installer
-OutputBaseFilename=ScreenShotToolSetup
+OutputBaseFilename=ScreenShotToolSetup-Inno
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -33,3 +33,4 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "Launch {#MyAppName}"; Flags: nowait postinstall skipifsilent
+
