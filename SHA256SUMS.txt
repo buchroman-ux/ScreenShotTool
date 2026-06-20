@@ -1,10 +1,1 @@
-# SHA256 checksums for ScreenShotTool release assets
-# Replace the placeholder after building the final installer for a release.
-#
-# Generate with:
-# Get-FileHash .\ScreenShotToolSetup.exe -Algorithm SHA256
-#
-# Format:
-# <sha256-hash>  <filename>
-
-PLACEHOLDER_SHA256_REPLACE_AFTER_BUILD  ScreenShotToolSetup.exe
+f9ca3a9c25740ae31ee9a8697f1fd269c9fb4b332d5cbbd762f1f509e8bf2a6c  ScreenShotToolSetup.exe
